@@ -1,0 +1,29 @@
+{
+  "name": "case-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitshaw42/case-management-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitshaw42/case-management-system/issues"
+  },
+  "homepage": "https://github.com/ankitshaw42/case-management-system#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
