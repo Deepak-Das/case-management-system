@@ -1,15 +1,15 @@
 const { db } = require('../config/firestore');
 
 class UserService {
-  async init() {
+  constructor() {
     this.userRef = db.collection('users');
-    this.userSnapshot = await this.userRef.get();
   }
 
-  async getUsers() {
+  async getAll() {
     const users = [];
+    const userSnapshot = await this.userRef.get();
 
-    for (const doc of this.userSnapshot.docs) {
+    for (const doc of userSnapshot.docs) {
       const { firstName, lastName } = doc.data();
 
       users.push({ id: doc.id, firstName, lastName });
@@ -18,7 +18,7 @@ class UserService {
     return users;
   }
 
-  async getUserById(userId) {
+  async getById(userId) {
     const user = await this.userRef.doc(userId).get();
     if (!user.exists) {
       throw new Error('User not found.');
@@ -29,9 +29,5 @@ class UserService {
 }
 
 const userService = new UserService();
-
-(async function () {
-  await userService.init();
-})();
 
 module.exports = { userService };

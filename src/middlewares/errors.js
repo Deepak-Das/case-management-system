@@ -8,4 +8,8 @@ const handleErrors = (err, req, res, next) => {
   });
 };
 
-module.exports = handleErrors;
+const handleAsyncErrors = (handler) => (req, res, next) => {
+  handler(req, res, next).catch((error) => next(error));
+};
+
+module.exports = { handleErrors, handleAsyncErrors };
