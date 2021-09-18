@@ -1,0 +1,4 @@
+only one index.js file > it call controller routes
+                       >no startup dir
+                       >config.js should also be in config folder
+                       

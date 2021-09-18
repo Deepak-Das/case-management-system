@@ -1,0 +1,8 @@
+routes will contain all files as follows :
+1.Clients.js > main routhing file we will only call this file in controller
+    a. clients get req file in getclientReq folder
+    b. clients post req file in getclientReq folder
+
+
+=========================================================
+This system of file must be followed by all the member admin,clients,associates and cases etc

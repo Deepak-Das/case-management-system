@@ -1,0 +1,5 @@
+Controller will have 3 files :-
+1. Client.controller.js
+2. associate.controller.js
+3. admin.controller.js
+4. caseDetail.controller.js
